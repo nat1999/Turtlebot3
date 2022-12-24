@@ -1,0 +1,1 @@
+#Se crea un archivo .txt donde se alamcena la posición "Y" del robot
