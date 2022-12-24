@@ -1,0 +1,1 @@
+# Se crea un archivo .txt, donde se almacena la orientación del robot
