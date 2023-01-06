@@ -14,14 +14,20 @@
 
 #IMPORTA LIRBRERÍAS
 
+#Importar la API de Ros para python
 import rospy
+#Importa el tipo de mensaje Vector3 del paquete geometry_msgs
 from geometry_msgs.msg import Vector3
+#Importa el tipo de mensaje Twist del paquete geometry_msgs
 from geometry_msgs.msg import Twist
+#Importa el tipo de mensaje Odometry del paquete nav_msgs
 from nav_msgs.msg import Odometry
-from tf.transformations import euler_from_quaternion
+#Importa el tipo de mensaje Float32 del paquete std_msgs
+from std_msgs.msg import Float32
+
+#Otras librerías adicionales 
 import time 
 import numpy as np
-from std_msgs.msg import Float32
 
 
 ######################################################################################333
@@ -61,7 +67,7 @@ def giro():
     pub_vel.publish(vel_bot)
 
 def pare():
-    #Para la detección del robot
+    #Para detener el robot
     vel_bot.linear.x = 0.0
     vel_bot.angular.z = 0.0
     #Se publica el mensaje de velocidad 
@@ -87,66 +93,66 @@ if __name__ == '__main__':
     try:    
             #Llama la función
             desplazamiento_x()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             giro()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
 
             #Llama la función    
             desplazamiento_x()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama a la función
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             giro()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función 
             pare()
-            #Pausa la ejecución 
+            #Retardo
             time.sleep(2.0)
 
             #Llama la función 
             desplazamiento_x()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función 
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función 
             giro()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función 
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
 
             #Llama la función
             desplazamiento_x()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función 
             pare()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             giro()
-            #Pausa la ejecución
+            #Retardo
             time.sleep(2.0)
             #Llama la función
             pare()
